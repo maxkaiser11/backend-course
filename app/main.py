@@ -9,6 +9,11 @@ def get_shipment(id: int):
     return {"id": id, "content": "wooden table", "status": "in transit"}
 
 
+@app.get("/shipment/latest")
+def get_latest_shipment():
+    return {"id": 12798, "content": "glassware", "status": "placed"}
+
+
 @app.get("/scalar")
 def get_scalar_docs():
     return get_scalar_api_reference(
